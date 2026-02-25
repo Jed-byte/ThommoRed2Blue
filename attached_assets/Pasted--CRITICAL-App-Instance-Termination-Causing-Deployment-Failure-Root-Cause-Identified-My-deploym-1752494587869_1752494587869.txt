@@ -1,0 +1,66 @@
+# CRITICAL: App Instance Termination Causing Deployment Failure
+
+## Root Cause Identified
+My deployment logs show **app instances being terminated and restarted**, which is causing the blank page issue. This is a **Replit infrastructure stability problem**.
+
+## Evidence from Logs
+```
+2025-07-14 15:31:13.47 [984fbede] > NODE_ENV=production node dist/index.js
+2025-07-14 15:31:14.62 [984fbede] 11:31:14 AM [express] serving on port 5000
+2025-07-14 15:46:04.37 [272d3f5f] starting up user application  ← NEW INSTANCE
+2025-07-14 15:46:07.14 [272d3f5f] 11:46:07 AM [express] serving on port 5000
+2025-07-14 15:48:55.84 [984fbede] system: received signal terminated  ← KILLED
+2025-07-14 16:00:28.36 [245fb840] starting up user application  ← NEW INSTANCE
+2025-07-14 16:00:31.44 [245fb840] 12:00:31 PM [express] serving on port 5000
+```
+
+## Problem Analysis
+1. **Instance ID Changes**: 984fbede → 272d3f5f → 245fb840
+2. **Termination Signal**: "system: received signal terminated"
+3. **Multiple Restarts**: App keeps getting killed and restarted
+4. **Timing**: App starts successfully but gets terminated randomly
+
+## Critical Questions for Replit Infrastructure Team
+
+### 1. Why is my app being terminated?
+- What triggers the "received signal terminated"?
+- Is there a memory limit being exceeded?
+- Are there CPU usage limits causing termination?
+- Is this related to the MemoryStore warning?
+
+### 2. Instance Management Issues
+- Why are multiple instances running simultaneously?
+- Are there conflicts between instance IDs?
+- Is the load balancer routing to terminated instances?
+
+### 3. Deployment URL Routing
+- Is the deployment URL cached to a terminated instance?
+- Does the deployment URL update when instances restart?
+- Are there race conditions in the proxy routing?
+
+## Immediate Investigation Needed
+
+### Resource Usage Check
+```bash
+# Check memory usage during startup
+free -h
+ps aux | grep node
+
+# Check if app is hitting resource limits
+top -p $(pgrep node)
+```
+
+### MemoryStore Issue
+The warning about MemoryStore might be related:
+```
+Warning: connect.session() MemoryStore is not designed for a production environment, as it will leak memory, and will not scale past a single process.
+```
+
+**Could this memory leak be causing the terminations?**
+
+### Instance Stability Test
+- Monitor how long instances stay alive
+- Check if termination happens at specific intervals
+- Verify if termination correlates with deployment URL access
+
+## Requ

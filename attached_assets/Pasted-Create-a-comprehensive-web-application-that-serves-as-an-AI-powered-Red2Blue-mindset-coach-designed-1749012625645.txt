@@ -1,0 +1,101 @@
+Create a comprehensive web application that serves as an AI-powered Red2Blue mindset coach, designed to replace face-to-face coaching sessions for elite golfers and high performers.
+
+Core Application Purpose
+Build an intelligent coaching platform that helps users shift from "Red Head" (stressed, reactive state) to "Blue Head" (calm, focused performance state) using simple, implementable language and techniques.
+
+Target Users
+Primary: Elite golfers seeking mental performance improvement
+Secondary: Athletes, sales teams, management, students, and families
+Key Features to Implement
+1. AI Coach Personality & Communication
+Name: Thommo (Red2Blue Coach)
+Tone: Empathetic, clear, business casual
+Communication Style: Simple language, avoids clichés, focuses on immediate value
+Approach: Listen first, understand before coaching, prioritize empathy
+2. Core Red2Blue Assessment System
+Create an interactive mental skills assessment tool featuring:
+
+Four Key Areas: Intensity, Decision Making, Diversions, Execution
+Scoring System: 0-100 scale for each area (total possible: 1200 points)
+Real-time Analysis: Identify Red Head vs Blue Head patterns
+Personalized Feedback: Specific recommendations based on assessment results
+3. Interactive Coaching Modules
+Situation-Based Scenarios: Golf-specific pressure situations
+Red Head Trigger Identification: Help users spot stress patterns
+Blue Head Technique Training: Simple, quick-implementation strategies
+Performance Review Tools: Post-round mental skills analysis
+4. Personalized Coaching Dashboard
+Progress Tracking: Monitor improvement in mental skills over time
+Custom Action Plans: Tailored recommendations based on individual struggles
+Quick Access Tools: Breathing exercises, focus techniques, pressure management
+Performance Metrics: Sleep quality, stress levels, emotional resilience tracking
+5. Resilience Toolkit Integration
+Breathing Exercises: Guided audio sessions
+Meditation Resources: Short, golf-focused mindfulness practices
+Inspiring Content: Motivational quotes and success stories
+Environmental Optimization: Digital boundary recommendations
+6. Real-Time Support Features
+Pre-Round Preparation: Mental readiness protocols
+Mid-Round Support: Quick Blue Head techniques accessible during play
+Post-Round Analysis: Immediate mental performance review
+Crisis Intervention: Rapid Red Head to Blue Head shift techniques
+Technical Requirements
+Frontend Design
+Clean, minimalist interface reducing visual clutter
+Mobile-responsive for on-course accessibility
+Intuitive navigation suitable for high-stress moments
+Color scheme: Red (stress indicators) to Blue (calm state) visual progression
+AI Integration
+Natural language processing for personalized coaching conversations
+Pattern recognition for identifying Red Head triggers in user responses
+Adaptive learning to improve coaching recommendations over time
+Contextual awareness of golf-specific mental challenges
+Data Management
+Secure user profile and progress storage
+Performance analytics and trend identification
+Goal tracking (quarterly objectives like "10 elite golfers completion")
+Privacy-compliant data handling for athlete information
+Core Coaching Methodology Implementation
+Red Head Identification System
+Detect language patterns indicating: doubt, internal conflict, past/future focus
+Flag stress indicators: "I should have...", "I can't believe...", pressure anxiety
+Monitor consistency issues despite technical skill
+Blue Head Transition Tools
+Process-focused language training
+Present-moment awareness techniques
+Calm, focused performance state maintenance
+Simple implementation strategies for immediate use
+Assessment Integration
+Implement the Mental Skills X-Check system with:
+
+Structured review processes
+Trend analysis capabilities
+Issue identification and strategy adjustment
+Progress monitoring across all four skill areas
+User Journey Flow
+Initial Assessment: Complete Red2Blue mental skills evaluation
+Personalized Plan: Receive custom coaching recommendations
+Daily Practice: Access quick techniques and exercises
+Performance Application: Use tools during actual golf rounds
+Progress Review: Regular check-ins and plan adjustments
+Advanced Development: Graduate to deeper resilience practices
+Success Metrics to Track
+User engagement with coaching modules
+Improvement in Mental Skills X-Check scores
+Consistency in performance under pressure
+User retention and program completion rates
+Qualitative feedback on technique effectiveness
+Unique Value Proposition Integration
+Ensure the app reflects your core differentiator: "Uses simple language that can be implemented very quickly" - every feature should prioritize immediate applicability over complex theory.
+
+Business Goal Alignment
+Design the app to support your quarterly objective of acquiring 10 elite golfers by providing a scalable, high-quality coaching experience that demonstrates the effectiveness of Red2Blue methodology.
+
+Additional Instructions for Replit:
+
+Use modern web technologies (React/Vue.js for frontend, Node.js/Python for backend)
+Implement responsive design for mobile golf course usage
+Include offline capability for techniques accessible without internet
+Create admin dashboard for monitoring user progress and engagement
+Build in feedback collection system for continuous improvement
+This app should effectively capture your empathetic coaching approach while providing the scalability to reach elite golfers beyond personal one-on-one sessions.

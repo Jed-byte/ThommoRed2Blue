@@ -1,0 +1,58 @@
+# CRITICAL: Replit Deployment Link Broken - Preview Works Fine
+
+## Problem Summary
+**This is NOT a code issue.** My Express.js application works perfectly in the Replit preview pane but the deployment URL serves a blank page. This indicates a Replit deployment configuration or infrastructure problem.
+
+## Current Status
+- ✅ **Preview pane works perfectly** - app displays correctly
+- ✅ Server starts without errors on port 5000
+- ✅ All routes and static files serve correctly in preview
+- ✅ Express logs show normal operation
+- ❌ **Deployment URL shows blank page: https://performance-ai-coach-markesthompson.replit.app/**
+- ❌ **16 failed deployment attempts**
+
+## Key Evidence
+**The fact that preview works but deployment doesn't proves this is a Replit platform issue, not my application code.**
+
+## Required Investigation by Replit Team
+
+### 1. Deployment URL Routing Issue
+- Is the deployment URL correctly forwarding to my running application?
+- Are there any proxy/gateway issues between the deployment domain and my app?
+- Check if deployment URL is hitting the correct port (5000)
+
+### 2. DNS/Domain Configuration
+- Verify DNS resolution for performance-ai-coach-markesthompson.replit.app
+- Check if the deployment subdomain is properly configured
+- Investigate any CDN/edge server issues
+
+### 3. Replit Infrastructure Check
+- Are there any known issues with deployment URL generation?
+- Check deployment proxy configuration for my project
+- Verify SSL/TLS termination is working correctly
+
+### 4. Port Forwarding Verification
+```bash
+# Please verify these are identical:
+# Preview URL port forwarding vs Deployment URL port forwarding
+# Both should route to localhost:5000
+```
+
+### 5. Deployment vs Preview Differences
+- What's different between how preview URLs and deployment URLs work?
+- Are there different proxy configurations?
+- Different caching or CDN behavior?
+
+## Specific Tests Needed
+
+1. **Direct curl test of deployment URL**:
+   ```bash
+   curl -v https://performance-ai-coach-markesthompson.replit.app/
+   ```
+
+2. **Compare headers between preview and deployment**:
+   - Preview URL headers vs deployment URL headers
+   - Response codes and content-type headers
+
+3. **Check deployment logs vs runtime logs**:
+   - Are deployment URLs hitting

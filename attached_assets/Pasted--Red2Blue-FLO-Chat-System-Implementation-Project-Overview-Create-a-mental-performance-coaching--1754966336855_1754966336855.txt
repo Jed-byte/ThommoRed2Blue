@@ -1,0 +1,116 @@
+# Red2Blue FLO Chat System Implementation
+
+## Project Overview
+Create a mental performance coaching platform called Red2Blue with an AI chat agent named FLO and a tiered pricing system with chat limitations.
+
+## Core Requirements
+
+### 1. User Authentication & Tiers
+- Implement user registration/login system
+- Track user subscription tier (Free, Premium, Ultimate)
+- Store user chat usage counts and subscription status
+
+### 2. FLO Chat Agent Integration
+- Create a chat interface for the AI mental coach "FLO"
+- Implement chat history storage
+- Add real-time messaging functionality
+- Include suggested prompts: "First tee nerves", "Missed putts", "Pressure situations"
+
+### 3. Chat Limitations by Tier
+
+#### Free Access ($0/month)
+- Limit to exactly 5 total chats with FLO
+- Display remaining chat count to user
+- Block chat access after limit reached
+- Show upgrade prompt when limit hit
+
+#### Premium Access ($590 one-time)
+- Unlimited FLO chats for first year
+- After year 1: $100/year subscription required
+- Automatic renewal system
+
+#### Ultimate Access ($2290 one-time)  
+- Unlimited FLO chats for first year
+- After year 1: $100/year subscription required
+- Includes human coaching features
+- Automatic renewal system
+
+### 4. Subscription Management
+- Track subscription start dates
+- Implement annual renewal billing
+- Send renewal notifications
+- Handle subscription lapses (revert to 5 chat limit)
+- Payment integration (Stripe recommended)
+
+### 5. User Interface Components
+
+#### Pricing Page
+- Display three tiers with updated pricing
+- Premium: $590 (was $490) - includes 1st year FLO unlimited
+- Ultimate: $2290 (was $2190) - includes 1st year FLO unlimited
+- Clear pricing breakdown showing FLO subscription cost
+
+#### Chat Interface
+- Show remaining chats for free users
+- Display subscription status and renewal date
+- Upgrade prompts for limited users
+- Professional mental coaching themed design
+
+#### Dashboard
+- Chat usage statistics
+- Subscription status and renewal info
+- Access to downloadable PDFs (discretionary)
+- Billing history
+
+### 6. Legal/Disclaimer Components
+Add prominent disclaimer text:
+"Lifetime access applies to the Red2Blue portal only. Unlimited chat with FLO requires yearly subscription ($100/year) with first year included in advertised price. Support document downloads are provided at our discretion and are not guaranteed as part of any subscription tier."
+
+### 7. Database Schema
+```sql
+users table:
+- id, email, password, subscription_tier, chat_count, subscription_start_date, subscription_status, created_at
+
+chat_sessions table:  
+- id, user_id, message, response, timestamp, session_id
+
+subscriptions table:
+- id, user_id, tier, amount_paid, start_date, renewal_date, status, stripe_subscription_id
+```
+
+### 8. Key Features to Implement
+- Chat counter for free users
+- Subscription renewal automation
+- Payment processing integration
+- Email notifications for renewals
+- Admin panel for managing users/subscriptions
+- Mobile-responsive design
+- Export chat history functionality
+
+### 9. Technical Stack Suggestions
+- Frontend: React/Next.js or vanilla HTML/CSS/JS
+- Backend: Node.js/Express or Python/Flask
+- Database: PostgreSQL or MongoDB
+- Payment: Stripe API
+- Authentication: JWT or session-based
+- AI Integration: OpenAI API or similar for FLO responses
+
+### 10. MVP Implementation Priority
+1. Basic user auth and tiers
+2. FLO chat interface with 5-message limit for free users
+3. Payment integration for upgrades
+4. Subscription renewal system
+5. Admin dashboard
+6. Legal disclaimers and pricing updates
+
+## Success Metrics
+- Track chat usage by tier
+- Monitor conversion from free to paid
+- Subscription renewal rates
+- User engagement with FLO
+
+## Additional Notes
+- Ensure all pricing clearly shows the $100 increase includes first year FLO access
+- Make renewal process seamless but transparent
+- Provide clear value proposition for each tier
+- Include mental performance coaching themed content and design elements

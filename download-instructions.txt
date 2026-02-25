@@ -1,0 +1,25 @@
+RED2BLUE PLATFORM - CLEAN DEPLOYMENT PACKAGE
+
+Your clean deployment files (280KB) are ready in: /tmp/red2blue-deploy/
+
+To download:
+1. In your Replit Files panel (left side), look for a folder icon or navigation
+2. Navigate to: tmp → red2blue-deploy
+3. Download the folder OR individual files
+
+Files included in clean package:
+- client/ (React frontend)
+- server/ (Express backend) 
+- shared/ (schemas)
+- package.json (dependencies)
+- vite.config.ts (build config)
+- tailwind.config.ts (styling)
+- tsconfig.json (TypeScript config)
+- All other config files
+
+This package is GitHub-ready (no node_modules = no size limit issues)
+
+Next steps:
+1. Download this clean package
+2. Upload to GitHub repository
+3. Import to Vercel for deployment

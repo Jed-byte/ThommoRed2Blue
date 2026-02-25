@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+
+  /* Cerosity custom colors */
+  --red-primary: 0 74% 42%; /* #DC2626 */
+  --red-light: 0 93% 94%; /* #FEE2E2 */
+  --coral: 21 90% 48%; /* #F97316 */
+  --blue-primary: 213 94% 68%; /* #2563EB */
+  --blue-deep: 224 76% 48%; /* #1E40AF */
+  --blue-light: 214 100% 97%; /* #EFF6FF */
+  --success: 160 84% 39%; /* #059669 */
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-gray-50 text-foreground;
+  }
+}
+
+@layer utilities {
+  .red-primary {
+    color: hsl(var(--red-primary));
+  }
+  .bg-red-primary {
+    background-color: hsl(var(--red-primary));
+  }
+  .red-light {
+    color: hsl(var(--red-light));
+  }
+  .bg-red-light {
+    background-color: hsl(var(--red-light));
+  }
+  .coral {
+    color: hsl(var(--coral));
+  }
+  .bg-coral {
+    background-color: hsl(var(--coral));
+  }
+  .blue-primary {
+    color: hsl(var(--blue-primary));
+  }
+  .bg-blue-primary {
+    background-color: hsl(var(--blue-primary));
+  }
+  .blue-deep {
+    color: hsl(var(--blue-deep));
+  }
+  .bg-blue-deep {
+    background-color: hsl(var(--blue-deep));
+  }
+  .blue-light {
+    color: hsl(var(--blue-light));
+  }
+  .bg-blue-light {
+    background-color: hsl(var(--blue-light));
+  }
+  .success {
+    color: hsl(var(--success));
+  }
+  .bg-success {
+    background-color: hsl(var(--success));
+  }
+
+  .gradient-red-blue {
+    background: linear-gradient(135deg, hsl(var(--red-primary)) 0%, hsl(var(--blue-primary)) 100%);
+  }
+
+  .gradient-red-coral {
+    background: linear-gradient(to right, hsl(var(--red-primary)) 0%, hsl(var(--coral)) 100%);
+  }
+
+  .gradient-coral-blue {
+    background: linear-gradient(to right, hsl(var(--coral)) 0%, hsl(var(--blue-primary)) 100%);
+  }
+
+  .gradient-blue-deep {
+    background: linear-gradient(to right, hsl(var(--blue-primary)) 0%, hsl(var(--blue-deep)) 100%);
+  }
+}

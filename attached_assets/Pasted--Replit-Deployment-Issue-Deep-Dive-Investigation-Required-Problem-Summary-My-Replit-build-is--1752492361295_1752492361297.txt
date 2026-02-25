@@ -1,0 +1,68 @@
+# Replit Deployment Issue - Deep Dive Investigation Required
+
+## Problem Summary
+My Replit build is consistently showing a blank site when accessed through the Replit app URL. This is preventing me from proceeding to domain deployment. **This is attempt #15** - I need a comprehensive diagnosis and permanent fix, not another surface-level suggestion.
+
+## Current Symptoms
+- ✅ Build appears to complete successfully
+- ❌ Replit app URL shows completely blank page
+- ❌ Cannot proceed to custom domain deployment
+- ❌ Issue persists across multiple rebuild attempts
+
+## Required Investigation Steps
+
+### 1. Build Process Analysis
+- Check build logs for ANY warnings or errors (not just failures)
+- Verify all dependencies are correctly installed
+- Confirm build output directory is correctly configured
+- Validate that the build process is generating actual files
+
+### 2. Server Configuration Review
+- Verify the correct port is being used (typically 3000 for Replit)
+- Check if the application is properly binding to 0.0.0.0 (not just localhost)
+- Confirm the start command is correctly configured
+- Validate environment variables are properly set
+
+### 3. File System Investigation
+- List contents of build/dist directory after build completion
+- Check file permissions on generated files
+- Verify index.html exists and is not empty
+- Confirm all static assets are properly linked
+
+### 4. Network/Routing Analysis
+- Test if the application responds to health checks
+- Verify routing configuration (especially for SPAs)
+- Check if there are any CORS issues
+- Validate that the app serves content on the root path
+
+### 5. Browser/Client Side Check
+- Inspect browser console for JavaScript errors
+- Check Network tab for failed requests
+- Verify if HTML is being served but appears blank
+- Test in multiple browsers/incognito mode
+
+## Technical Context
+**Framework/Stack:** [Please specify your framework - React, Vue, Next.js, etc.]
+**Build Tool:** [Specify - Vite, Webpack, etc.]
+**Node Version:** [Specify if known]
+**Package Manager:** [npm, yarn, pnpm]
+
+## What I DON'T Need
+- Generic "try rebuilding" suggestions
+- Basic troubleshooting steps I've likely already tried
+- Surface-level fixes that don't address root cause
+
+## What I DO Need
+- Systematic diagnosis of the actual problem
+- Step-by-step investigation process
+- Root cause identification
+- Permanent solution with explanation
+- Prevention steps for future deployments
+
+## Success Criteria
+- Replit app URL shows the actual website content
+- Understanding of why this happened
+- Confidence that the fix will work for domain deployment
+- Clear steps to prevent this issue recurring
+
+**Please provide a detailed action plan with specific commands to run and logs to check. I'm willing to share any logs, screenshots, or configuration files needed for proper diagnosis.**
