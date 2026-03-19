@@ -203,9 +203,9 @@
 
                                   ──────────────────────
                                       READY TO SCALE
-                                  Platform: red2blue.me
-                                Contact: support@red2blue.me
-                                  Phone: +971505283505
+                                  Platform: red2xxxxx
+                                Contact: support@xxxxx
+                                  Phone: +971xxxxx
                                       Dubai, UAE
                                   ──────────────────────
 ```
